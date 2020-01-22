@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+ <aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>*</pattern>
+        <template>
+<random>
+            <li>Sorry i don'tunderstand.</li>
+   <li>I have no answer for that.</li>
+            <li>What was that?</li>
+</random>
+        </template>
+    </category>
+    <category>
+        <pattern>HI</pattern>
+        <template>
+<random>
+<li>Hello!.Whatâs wrong with you?</li>
+<li>Whats up!.Whatâs wrong with you?</li>
+<li>Hey.Whatâs wrong with you?</li>
+<li>Hi,Whatâs wrong with you?</li>
+<li>Hi</li>
+</random>
+        </template>
+    </category>
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HII</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HEY</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHATS UP</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HELLO *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HI *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    <category>
+        <pattern> I have been suffering from *</pattern>
+        <template>
+            <think><set name="name"><star/></set></think>
+            <think><set name="topic"><star/></set></think>
+            Have you taken any medicine so far?
+        </template>
+    </category>
+<topic name="name">
+   <category>
+       <pattern>yes</pattern>
+       <that>Have you taken any medicine so far?</that>
+       <template>Do you have any other symptoms like running nose?</template>
+   </category>
+   <category>
+       <pattern>Yes</pattern>
+       <this>Do you have any other symptoms like running nose?</this>
+       <template>Headache is a result of sinus infection do you have any sinus problem?</template>
+   </category>
+   <category>
+       <pattern>Yes</pattern>
+       <that>Headache is a result of sinus infection do you have any sinus problem?</that>
+       <template>
+           Some tips for recovery.
+           <ul>
+               <li>Take long showers or breathe in steam from a pot of warm (but not too hot) water.</li>
+               <li>Drink lots of fluids.</li>
+               <li>Place a warm, wet towel on your face</li>
+           </ul>
+           Use these medicines for emergency.
+           <ul>
+               <li>Alpha-SH</li>
+               <li>Paracetomal</li>
+               <li>Advil</li>
+           </ul>
+           <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdn5tJK081Td70JoSCPmKcNLfbrL8BM0N0cRH4hbGenGubW0pu3A&s</image>
+           <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7rVY-ZZ1xObPF4NOpEtSEjABdYEji6Ckg2V6dVhXYEQIcyD7d6Q&s</image>
+           <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmc0JOzKM_bHQ6V1tOydqDoAhL3DyglBHFuz8t9_irqGeklFE&s</image>
+           </template>
+   </category>
+<category>
+<pattern>No</pattern>
+<that>Headache is a result of sinus infection do you have any sinus problem?</that>
+<template>
+    So it is a regular one that results from anxiety and fatigue.
+    Some tips for recovery.
+<ul>
+<li>Reduce your stress levels through exercise, relaxation techniques, or therapy.</li>
+<li>Apply a hot or cold compress to your head for 5 to 10 minutes at a time. This can help ease pain.</li>
+<li>Try acupuncture or massage.</li>
+</ul>
+</template>
+</category>
+</topic>       
+</aiml>
